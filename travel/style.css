@@ -1,0 +1,39 @@
+/* スマホ前提 */
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.header {
+ 
+  background-color: #d0f9faa3;
+}
+
+.header .inner {
+  width: 100%;
+  max-width: 375px;
+  height: 120px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 16px;
+}
+
+.logo {
+  height: 90px;
+}
+
+.nav li {
+  list-style: none;
+}
+
+.nav a {
+  color: #5a3a2e;
+  font-size: 14px;
+  text-decoration: none;
+} 
+
+
+
+

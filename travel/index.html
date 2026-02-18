@@ -7,26 +7,117 @@
   <link rel="stylesheet" href="style.css">
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#f7f5f2">
-</haed>
+
+</head>
 
 <body>
+  <div class="wrapper">
 <!-- ヘッダー　-->
-<header class="header">
-  <div class="inner">
-    <img src="images/logo.png" class="logo">
-    <nav class="nav">
-      <ul>
-        <li><a href="#">list</a></li>
-        <li><a href="#">todo</a></li>
-        <li><a href="#">expense</a></li>
-        <li><a href="#">hotel</a></li>
-      </ul>
-    </nav>
+    <header class="header">
+      <div class="inner">
+      <img src="images/logo.png" class="logo">
+        <nav class="nav">
+          <ul>
+            <li><a href="#">list</a></li>
+            <li><a href="#">todo</a></li>
+            <li><a href="#">expense</a></li>
+            <li><a href="#">hotel</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+<!-- メイン　-->
+    <main class="main">
+      <div class="content">
+      <p><span class="under">Schedule</span></p>
+        <div class="content-list">
+          <ul class="schedule">
+            <li>
+              <a href="#" class="schedule-list fade-in">
+                <div class="thumb">
+                  <img src="images/plane.png" alt="交通">
+                </div>
+                <span class="title">交通</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="schedule-list fade-in">
+                <div class="thumb">
+                  <img src="images/otaru.png" alt="小樽">
+                </div>
+                <span class="title">小樽 1Days</span>
+               </a>
+            </li>
+            <li>
+              <a href="#" class="schedule-list fade-in">
+                <div class="thumb">
+                  <img src="images/sapporo.png" alt="札幌">
+                </div>
+                <span class="title">札幌 2Days</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+  <!-- todo -->
+    <div class="todo">
+      <p><span class="under">todo</span></p>
+      <div class="todo-input">
+        <span>☑️</span>
+        <input id="input" type="text" placeholder="ToDoを入力してEnter"/>
+        <button id="addBtn">追加</button>
+
+      </div>
+      <ul id="list"></ul>
+    </div>
+
+  <!-- expense -->
+    <div class="expense">
+      <select id="category">
+        <option value="食事">食事</option>
+        <option value="固定費">固定費</option>
+        <option value="ワイン">ワイン</option>
+        <option value="その他">その他</option>
+      </select>
+
+      <input type="number" id="amount" holder="金額(円)"/>
+      <button onclick="addExpense()" >+ 旅費を追加</button>
+
+  <!-- 集計 -->
+    <div class="card">
+        <h2>total</h2>
+        <p id="total" class="total">合計 </p>
+        <canvas id="expenseChart"></canvas>
+      </div>
+
+    </div>
+
+  <!-- hotel -->
+    <div class="map">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2914.58886144923!2d141.3514619769349!3d43.07111388988236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f0b297ee9b08f93%3A0x2c729cf049943b3a!2z44Ob44OG44OrIOOCqOODn-OCquODsyDmnK3luYw!5e0!3m2!1sja!2sjp!4v1769930656526!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        width="100px"
+        height="240"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+    </main>
+
+<!-- footer -->
+  <footer class="footer">
+  <button id="pagetop" class="pagetop-btn" aria-label="ページトップへ戻る"></button>
+</footer>
   </div>
-</header>
+
+  <script src="main.js"></script>
 
 
-
+  
 </body>
 </html>
 
